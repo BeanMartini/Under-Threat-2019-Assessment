@@ -1,6 +1,6 @@
 ﻿namespace Under_Threat_2019_Assessment
 {
-    partial class Form1
+    partial class frmThreat
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.pnlGame = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // pnlGame
+            // 
+            this.pnlGame.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlGame.Location = new System.Drawing.Point(12, 99);
+            this.pnlGame.Name = "pnlGame";
+            this.pnlGame.Size = new System.Drawing.Size(600, 400);
+            this.pnlGame.TabIndex = 0;
+            this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
+            // 
+            // frmThreat
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 511);
+            this.Controls.Add(this.pnlGame);
+            this.Name = "frmThreat";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlGame;
     }
 }
 
