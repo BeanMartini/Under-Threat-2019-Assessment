@@ -34,9 +34,9 @@
             // pnlGame
             // 
             this.pnlGame.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pnlGame.Location = new System.Drawing.Point(12, 99);
+            this.pnlGame.Location = new System.Drawing.Point(12, 87);
             this.pnlGame.Name = "pnlGame";
-            this.pnlGame.Size = new System.Drawing.Size(600, 400);
+            this.pnlGame.Size = new System.Drawing.Size(600, 450);
             this.pnlGame.TabIndex = 0;
             this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
             // 
@@ -44,7 +44,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 511);
+            this.ClientSize = new System.Drawing.Size(834, 549);
             this.Controls.Add(this.pnlGame);
             this.Name = "frmThreat";
             this.Text = "Form1";

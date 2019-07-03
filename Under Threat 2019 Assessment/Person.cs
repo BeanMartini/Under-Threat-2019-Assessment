@@ -19,8 +19,8 @@ namespace Under_Threat_2019_Assessment
         //Create a constructor (initialises the values of the fields)
         public Person()
         {
-            x = 10;
-            y = 360;
+            x = 500;
+            y = 380;
             width = 40;
             height = 40;
             person = Image.FromFile("person1.png");

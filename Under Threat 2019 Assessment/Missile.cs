@@ -16,12 +16,12 @@ namespace Under_Threat_2019_Assessment
         public Rectangle missileRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public Missile()
+        public Missile(int spacing)
         {
             x = 10;
-            y = 10;
-            width = 60;
-            height = 60;
+            y = spacing;
+            width = 45;
+            height = 40;
             missileImage = Image.FromFile("missile1.png");
             missileRec = new Rectangle(x, y, width, height);
         }
@@ -29,6 +29,7 @@ namespace Under_Threat_2019_Assessment
         // Methods for the Missile class
         public void drawMissile(Graphics g)
         {
+            missileRec = new Rectangle(x, y, width, height);
             g.DrawImage(missileImage, missileRec);
         }
     }
