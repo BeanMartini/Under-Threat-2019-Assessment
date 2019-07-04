@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlGame = new System.Windows.Forms.Panel();
+            this.tmrMissile = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlGame
@@ -39,6 +41,12 @@
             this.pnlGame.Size = new System.Drawing.Size(600, 450);
             this.pnlGame.TabIndex = 0;
             this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
+            // 
+            // tmrMissile
+            // 
+            this.tmrMissile.Enabled = true;
+            this.tmrMissile.Interval = 80;
+            this.tmrMissile.Tick += new System.EventHandler(this.tmrMissile_Tick);
             // 
             // frmThreat
             // 
@@ -56,6 +64,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlGame;
+        private System.Windows.Forms.Timer tmrMissile;
     }
 }
 

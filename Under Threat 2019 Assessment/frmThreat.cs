@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Reflection;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,8 @@ namespace Under_Threat_2019_Assessment
                 missile[i] = new Missile(y);
             }
 
-
+            //code to stop the panel from flickering
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlGame, new object[] { true }); //stops the panel from flickering
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,6 +52,15 @@ namespace Under_Threat_2019_Assessment
 
 
             person.drawPerson(g);
+        }
+
+        private void tmrMissile_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                missile[i].moveMissile();
+            }
+            pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
     }
 }

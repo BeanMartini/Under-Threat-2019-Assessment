@@ -18,7 +18,7 @@ namespace Under_Threat_2019_Assessment
         //Create a constructor (initialises the values of the fields)
         public Missile(int spacing)
         {
-            x = 10;
+            x = 0;
             y = spacing;
             width = 45;
             height = 40;
@@ -31,6 +31,20 @@ namespace Under_Threat_2019_Assessment
         {
             missileRec = new Rectangle(x, y, width, height);
             g.DrawImage(missileImage, missileRec);
+        }
+
+        public void moveMissile()
+        {
+            x += 10;
+
+            missileRec.Location = new Point(x, y);
+
+            if (missileRec.Location.X > 600)
+            {
+                x = 0;
+                missileRec.Location = new Point(x, y);
+            }
+
         }
     }
 }
