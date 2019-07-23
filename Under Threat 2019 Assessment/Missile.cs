@@ -35,7 +35,6 @@ namespace Under_Threat_2019_Assessment
 
         public void moveMissile()
         {
-            x += 10;
 
             missileRec.Location = new Point(x, y);
 

@@ -17,6 +17,7 @@ namespace Under_Threat_2019_Assessment
 
         // declare space for an array of 7 objects called missile 
         Missile[] missile = new Missile[7];
+        Random xspeed = new Random();
 
         Person person = new Person();
 
@@ -46,6 +47,10 @@ namespace Under_Threat_2019_Assessment
 
             for (int i = 0; i < 7; i++)
             {
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = xspeed.Next(5, 30);
+                missile[i].x += rndmspeed;
+
                 //call the Missile class's drawMissile method to draw the images
                 missile[i].drawMissile(g);
             }

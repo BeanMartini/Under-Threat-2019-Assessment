@@ -45,7 +45,6 @@
             // tmrMissile
             // 
             this.tmrMissile.Enabled = true;
-            this.tmrMissile.Interval = 80;
             this.tmrMissile.Tick += new System.EventHandler(this.tmrMissile_Tick);
             // 
             // frmThreat
@@ -54,6 +53,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 549);
             this.Controls.Add(this.pnlGame);
+            this.DoubleBuffered = true;
             this.Name = "frmThreat";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
