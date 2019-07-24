@@ -21,6 +21,9 @@ namespace Under_Threat_2019_Assessment
 
         Person person = new Person();
 
+        bool left, right, up, down;
+        string move;
+
         public frmThreat()
         {
             InitializeComponent();
@@ -57,6 +60,47 @@ namespace Under_Threat_2019_Assessment
 
 
             person.drawPerson(g);
+        }
+
+        private void tmrPerson_Tick(object sender, EventArgs e)
+        {
+            if (right) // if right arrow key pressed
+            {
+                move = "right";
+                person.movePerson(move);
+            }
+            if (left) // if left arrow key pressed
+            {
+                move = "left";
+                person.movePerson(move);
+            }
+            if (up) // if up arrow key pressed
+            {
+                move = "up";
+                person.movePerson(move);
+            }
+            if (down) // if down arrow key pressed
+            {
+                move = "down";
+                person.movePerson(move);
+            }
+
+        }
+
+        private void frmThreat_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = true; }
+            if (e.KeyData == Keys.Right) { right = true; }
+            if (e.KeyData == Keys.Up) { up = true; }
+            if (e.KeyData == Keys.Down) { down = true; }
+        }
+
+        private void frmThreat_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = false; }
+            if (e.KeyData == Keys.Right) { right = false; }
+            if (e.KeyData == Keys.Up) { up = false; }
+            if (e.KeyData == Keys.Down) { down = false; }
         }
 
         private void tmrMissile_Tick(object sender, EventArgs e)

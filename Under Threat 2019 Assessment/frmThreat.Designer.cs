@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrMissile = new System.Windows.Forms.Timer(this.components);
+            this.tmrPerson = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlGame
@@ -47,6 +48,12 @@
             this.tmrMissile.Enabled = true;
             this.tmrMissile.Tick += new System.EventHandler(this.tmrMissile_Tick);
             // 
+            // tmrPerson
+            // 
+            this.tmrPerson.Enabled = true;
+            this.tmrPerson.Interval = 50;
+            this.tmrPerson.Tick += new System.EventHandler(this.tmrPerson_Tick);
+            // 
             // frmThreat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -54,9 +61,12 @@
             this.ClientSize = new System.Drawing.Size(834, 549);
             this.Controls.Add(this.pnlGame);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.Name = "frmThreat";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmThreat_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmThreat_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -65,6 +75,7 @@
 
         private System.Windows.Forms.Panel pnlGame;
         private System.Windows.Forms.Timer tmrMissile;
+        private System.Windows.Forms.Timer tmrPerson;
     }
 }
 

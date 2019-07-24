@@ -34,5 +34,42 @@ namespace Under_Threat_2019_Assessment
             g.DrawImage(person, personRec);
         }
 
+        public void movePerson(string move)
+        {
+            personRec.Location = new Point(x, y);
+
+            if (move == "right")
+            {
+
+                x += 5;
+                personRec.Location = new Point(x, y);
+            }
+
+            personRec.Location = new Point(x, y);
+
+            if (move == "left")
+            {
+
+                x -= 5;
+                personRec.Location = new Point(x, y);
+            }
+
+            personRec.Location = new Point(x, y);
+
+            if (move == "up")
+            {
+
+                y -= 5;
+                personRec.Location = new Point(x, y);
+            }
+
+            if (move == "down")
+            {
+
+                y += 5;
+                personRec.Location = new Point(x, y);
+            }
+        }
+
     }
 }
