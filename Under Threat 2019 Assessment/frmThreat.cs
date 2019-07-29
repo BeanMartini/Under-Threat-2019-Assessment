@@ -24,6 +24,9 @@ namespace Under_Threat_2019_Assessment
         bool left, right, up, down;
         string move;
 
+        int score, lives;
+
+
         public frmThreat()
         {
             InitializeComponent();
@@ -105,9 +108,13 @@ namespace Under_Threat_2019_Assessment
 
         private void tmrMissile_Tick(object sender, EventArgs e)
         {
+            score = 0;
+
             for (int i = 0; i < 7; i++)
             {
                 missile[i].moveMissile();
+                score += missile[i].score;// get score from Missile class (in moveMissile method)
+                lblScore.Text = score.ToString();// display score
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }

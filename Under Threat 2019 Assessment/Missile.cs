@@ -35,11 +35,11 @@ namespace Under_Threat_2019_Assessment
 
         public void moveMissile()
         {
-
             missileRec.Location = new Point(x, y);
 
             if (missileRec.Location.X > 600)
             {
+                score += 1;// add 1 to score when a missile reaches the right of panel
                 x = 0;
                 missileRec.Location = new Point(x, y);
             }
