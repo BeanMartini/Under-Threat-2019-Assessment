@@ -90,6 +90,23 @@ namespace Under_Threat_2019_Assessment
 
         }
 
+        private void mnuStart_Click(object sender, EventArgs e)
+        {
+            score = 0;
+            lblScore.Text = score.ToString();
+            lives = int.Parse(txtLives.Text);// pass lives entered from textbox to lives variable
+            tmrMissile.Enabled = true;
+            tmrPerson.Enabled = true;
+
+        }
+
+        private void mnuStop_Click(object sender, EventArgs e)
+        {
+            tmrPerson.Enabled = false;
+            tmrMissile.Enabled = false;
+
+        }
+
         private void frmThreat_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = true; }

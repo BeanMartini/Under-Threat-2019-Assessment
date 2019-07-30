@@ -18,7 +18,7 @@ namespace Under_Threat_2019_Assessment
         //Create a constructor (initialises the values of the fields)
         public Missile(int spacing)
         {
-            x = -50;
+            x = -80;
             y = spacing;
             width = 45;
             height = 40;
