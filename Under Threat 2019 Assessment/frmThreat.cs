@@ -43,7 +43,7 @@ namespace Under_Threat_2019_Assessment
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            lives = int.Parse(txtLives.Text);// pass lives entered from textbox to lives variable
         }
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)
@@ -113,10 +113,32 @@ namespace Under_Threat_2019_Assessment
             for (int i = 0; i < 7; i++)
             {
                 missile[i].moveMissile();
+
+                if (person.personRec.IntersectsWith(missile[i].missileRec))
+                {
+                    //reset missile[i] back to top of panel
+                    missile[i].x = -50; // set  y value of missileRec
+                    lives -= 1;// lose a life
+                    txtLives.Text = lives.ToString();// display number of lives
+                    checkLives();
+                }
+
                 score += missile[i].score;// get score from Missile class (in moveMissile method)
                 lblScore.Text = score.ToString();// display score
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
+
+        private void checkLives()
+        {
+            if (lives == 0)
+            {
+                tmrMissile.Enabled = false;
+                tmrPerson.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
     }
 }

@@ -18,7 +18,7 @@ namespace Under_Threat_2019_Assessment
         //Create a constructor (initialises the values of the fields)
         public Missile(int spacing)
         {
-            x = 0;
+            x = -50;
             y = spacing;
             width = 45;
             height = 40;
@@ -40,7 +40,7 @@ namespace Under_Threat_2019_Assessment
             if (missileRec.Location.X > 600)
             {
                 score += 1;// add 1 to score when a missile reaches the right of panel
-                x = 0;
+                x = -50;
                 missileRec.Location = new Point(x, y);
             }
 

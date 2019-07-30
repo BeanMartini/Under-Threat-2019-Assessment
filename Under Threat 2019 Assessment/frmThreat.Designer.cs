@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtLives = new System.Windows.Forms.Label();
+            this.txtLives = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -113,7 +113,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(685, 426);
+            this.label4.Location = new System.Drawing.Point(693, 417);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 28);
             this.label4.TabIndex = 6;
@@ -121,11 +121,10 @@
             // 
             // txtLives
             // 
-            this.txtLives.AutoSize = true;
             this.txtLives.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLives.Location = new System.Drawing.Point(702, 454);
+            this.txtLives.Location = new System.Drawing.Point(707, 448);
             this.txtLives.Name = "txtLives";
-            this.txtLives.Size = new System.Drawing.Size(26, 28);
+            this.txtLives.Size = new System.Drawing.Size(21, 43);
             this.txtLives.TabIndex = 2;
             this.txtLives.Text = "5";
             // 
@@ -165,7 +164,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label txtLives;
+        private System.Windows.Forms.TextBox txtLives;
     }
 }
 
