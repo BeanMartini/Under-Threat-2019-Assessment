@@ -43,7 +43,9 @@ namespace Under_Threat_2019_Assessment
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lives = int.Parse(txtLives.Text);// pass lives entered from textbox to lives variable
+            MessageBox.Show("Use the left, right, up and down arrow keys to move your character. \n Don't get hit by any missiles! \n Every missile that gets past scores you a point. \n If your person gets hit by a missile, a life is lost! \n \n Enter your Name, press tab and enter the number of lives (1-9) \n Click Start to begin", "Game Instructions");
+            txtName.Focus();
+
         }
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)
