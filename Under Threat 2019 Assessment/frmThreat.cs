@@ -99,6 +99,7 @@ namespace Under_Threat_2019_Assessment
             lives = int.Parse(txtLives.Text);// pass lives entered from textbox to lives variable
             tmrMissile.Enabled = true;
             tmrPerson.Enabled = true;
+            Int32.TryParse(txtLives.Text, out lives);
 
         }
 
