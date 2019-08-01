@@ -90,6 +90,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 43);
             this.txtName.TabIndex = 1;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label3
             // 
@@ -126,9 +128,11 @@
             this.txtLives.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLives.Location = new System.Drawing.Point(707, 448);
             this.txtLives.Name = "txtLives";
-            this.txtLives.Size = new System.Drawing.Size(21, 43);
+            this.txtLives.Size = new System.Drawing.Size(30, 43);
             this.txtLives.TabIndex = 2;
-            this.txtLives.Text = "5";
+            this.txtLives.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLives.TextChanged += new System.EventHandler(this.txtLives_TextChanged);
+            this.txtLives.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLives_KeyPress_1);
             // 
             // menuStrip1
             // 
@@ -144,6 +148,7 @@
             // 
             // mnuStart
             // 
+            this.mnuStart.Enabled = false;
             this.mnuStart.Name = "mnuStart";
             this.mnuStart.Size = new System.Drawing.Size(43, 20);
             this.mnuStart.Text = "Start";

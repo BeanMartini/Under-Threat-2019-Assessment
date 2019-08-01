@@ -100,6 +100,8 @@ namespace Under_Threat_2019_Assessment
             tmrMissile.Enabled = true;
             tmrPerson.Enabled = true;
             Int32.TryParse(txtLives.Text, out lives);
+            txtLives.Enabled = false;
+            txtName.Enabled = false;
 
         }
 
@@ -110,12 +112,77 @@ namespace Under_Threat_2019_Assessment
 
         }
 
+        private void txtLives_TextChanged(object sender, EventArgs e)
+        {
+            string context = txtLives.Text;
+            bool isnumber = true;
+            //for loop checks for numbers as characters are entered
+            for (int i = 0; i < context.Length; i++)
+            {
+                if (!char.IsNumber(context[i]))//if current character not a number
+                {
+                    isnumber = false;//make isnumber false
+                    break;//exit the for loop
+                }
+            }
+
+            //if not a number clear the textbox and focus on it to enter lives again
+            if (isnumber == false)
+            {
+                txtLives.Clear();
+                txtLives.Focus();
+            }
+            else
+            {
+                mnuStart.Enabled = true;
+            }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            string context = txtName.Text;
+            bool isletter = true;
+            //for loop checks for letters as characters are entered
+            for (int i = 0; i < context.Length; i++)
+            {
+                if (!char.IsLetter(context[i]))//if current character not a letter
+                {
+                    isletter = false;//make isletter false
+                    break;//exit the for loop
+                }
+            }
+
+            //if not a letter clear the textbox and focus on it to enter name again
+            if (isletter == false)
+            {
+                txtName.Clear();
+                txtName.Focus();
+            }
+        }
+
         private void frmThreat_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
             if (e.KeyData == Keys.Down) { down = true; }
+        }
+
+        private void txtLives_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar > 48 && e.KeyChar < 59)//entered 1, 2, 3, 4, 5, 6, 7, 8 or 9
+            {
+                txtLives.Enabled = false; //stop player entering lives after game strated
+                mnuStart.Enabled = true; //enable player to click start
+            }
+
+            else //didn't enter 1, 2, 3, 4, 5, 6, 7, 8 or 9
+            {
+                MessageBox.Show("Please enter Numbers 1 to 9 only", "Error");
+                e.Handled = true;
+                txtLives.Focus();
+                txtLives.Clear();
+            }
         }
 
         private void frmThreat_KeyUp(object sender, KeyEventArgs e)
@@ -148,6 +215,7 @@ namespace Under_Threat_2019_Assessment
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
+
 
         private void checkLives()
         {
