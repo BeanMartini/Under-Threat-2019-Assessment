@@ -21,9 +21,9 @@ namespace Under_Threat_2019_Assessment
         {
             x = 500;
             y = 380;
-            width = 40;
-            height = 40;
-            person = Image.FromFile("person1.png");
+            width = 65;
+            height = 65;
+            person = Image.FromFile("person1.gif");
             personRec = new Rectangle(x, y, width, height);
         }
 
@@ -47,7 +47,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    x += 5;
+                    x += 7;
                 personRec.Location = new Point(x, y);
             }
 
@@ -62,7 +62,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    x -= 5;
+                    x -= 7;
                 personRec.Location = new Point(x, y);
             }
 
@@ -77,7 +77,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    y -= 5;
+                    y -= 7;
                 personRec.Location = new Point(x, y);
             }
 
@@ -90,7 +90,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    y += 5;
+                    y += 7;
                 personRec.Location = new Point(x, y);
             }
         }

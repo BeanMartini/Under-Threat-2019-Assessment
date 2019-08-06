@@ -21,8 +21,8 @@ namespace Under_Threat_2019_Assessment
             x = -80;
             y = spacing;
             width = 45;
-            height = 40;
-            missileImage = Image.FromFile("missile1.png");
+            height = 20;
+            missileImage = Image.FromFile("missile1.gif");
             missileRec = new Rectangle(x, y, width, height);
         }
 
