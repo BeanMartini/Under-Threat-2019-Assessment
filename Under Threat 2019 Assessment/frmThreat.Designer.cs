@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThreat));
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrMissile = new System.Windows.Forms.Timer(this.components);
             this.tmrPerson = new System.Windows.Forms.Timer(this.components);
@@ -48,6 +49,8 @@
             // pnlGame
             // 
             this.pnlGame.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlGame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlGame.BackgroundImage")));
+            this.pnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlGame.Location = new System.Drawing.Point(12, 87);
             this.pnlGame.Name = "pnlGame";
             this.pnlGame.Size = new System.Drawing.Size(600, 450);
@@ -66,7 +69,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(109, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(396, 73);
@@ -76,6 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(679, 131);
             this.label2.Name = "label2";
@@ -96,6 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(682, 286);
             this.label3.Name = "label3";
@@ -106,6 +113,7 @@
             // lblScore
             // 
             this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.Location = new System.Drawing.Point(702, 314);
             this.lblScore.Name = "lblScore";
@@ -116,6 +124,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(693, 417);
             this.label4.Name = "label4";
@@ -148,16 +157,21 @@
             // 
             // mnuStart
             // 
-            this.mnuStart.Enabled = false;
+            this.mnuStart.Font = new System.Drawing.Font("Bauhaus 93", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuStart.ForeColor = System.Drawing.Color.White;
+            this.mnuStart.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuStart.Name = "mnuStart";
-            this.mnuStart.Size = new System.Drawing.Size(43, 20);
+            this.mnuStart.Size = new System.Drawing.Size(50, 20);
             this.mnuStart.Text = "Start";
             this.mnuStart.Click += new System.EventHandler(this.mnuStart_Click);
             // 
             // mnuStop
             // 
+            this.mnuStop.Font = new System.Drawing.Font("Bauhaus 93", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuStop.ForeColor = System.Drawing.Color.White;
+            this.mnuStop.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuStop.Name = "mnuStop";
-            this.mnuStop.Size = new System.Drawing.Size(43, 20);
+            this.mnuStop.Size = new System.Drawing.Size(48, 20);
             this.mnuStop.Text = "Stop";
             this.mnuStop.Click += new System.EventHandler(this.mnuStop_Click);
             // 
@@ -165,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(834, 549);
             this.Controls.Add(this.txtLives);
             this.Controls.Add(this.label4);
@@ -176,6 +191,7 @@
             this.Controls.Add(this.pnlGame);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.White;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmThreat";
