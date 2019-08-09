@@ -55,9 +55,32 @@ namespace Under_Threat_2019_Assessment
 
             for (int i = 0; i < 7; i++)
             {
-                // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = xspeed.Next(5, 30);
-                missile[i].x += rndmspeed;
+
+                if (score < 15)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    int rndmspeed = xspeed.Next(5, 30);
+                    missile[i].x += rndmspeed;
+                }
+
+                if (score > 14)
+                {
+                    int rndmspeed = xspeed.Next(5, 32); //each missile has a higher random speed
+                    missile[i].x += rndmspeed;
+                }
+
+                if (score > 25)
+                {
+                    int rndmspeed = xspeed.Next(5, 32); //each missile has a higher random speed
+                    missile[i].x += rndmspeed;
+                }
+
+                if (score > 35)
+                {
+                    int rndmspeed = xspeed.Next(5, 30); //each missile has a higher random speed
+                    missile[i].x += rndmspeed;
+                }
+
 
                 //call the Missile class's drawMissile method to draw the images
                 missile[i].drawMissile(g);
@@ -224,6 +247,7 @@ namespace Under_Threat_2019_Assessment
                 tmrMissile.Enabled = false;
                 tmrPerson.Enabled = false;
                 MessageBox.Show("Game Over");
+                Application.Exit();
 
             }
         }
