@@ -47,7 +47,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    x += 7;
+                    x += 8;
                 personRec.Location = new Point(x, y);
             }
 
@@ -62,7 +62,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    x -= 7;
+                    x -= 8;
                 personRec.Location = new Point(x, y);
             }
 
@@ -77,7 +77,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    y -= 7;
+                    y -= 8;
                 personRec.Location = new Point(x, y);
             }
 
@@ -90,7 +90,7 @@ namespace Under_Threat_2019_Assessment
                     personRec.Location = new Point(x, y);
                 }
                 else
-                    y += 7;
+                    y += 8;
                 personRec.Location = new Point(x, y);
             }
         }
