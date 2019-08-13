@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Under_Threat_2019_Assessment
 {
@@ -12,9 +13,12 @@ namespace Under_Threat_2019_Assessment
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image person;//variable for the person's image
+
+        Image[] images = new Image[8];//set space for an array called images of 4 images
 
         public Rectangle personRec;//variable for a rectangle to place our image in
+
+        Animation animate;//create an object called animate
 
         //Create a constructor (initialises the values of the fields)
         public Person()
@@ -23,7 +27,14 @@ namespace Under_Threat_2019_Assessment
             y = 380;
             width = 65;
             height = 65;
-            person = Image.FromFile("person1.gif");
+
+            for (int i = 1; i <= 7; i++)
+            {
+                images[i] = Image.FromFile(Application.StartupPath + @"\person" + i.ToString() + ".gif");
+            }
+            //pass the images array to the Animation class's constructor
+            animate = new Animation(images);
+
             personRec = new Rectangle(x, y, width, height);
         }
 
@@ -31,7 +42,8 @@ namespace Under_Threat_2019_Assessment
         public void drawPerson(Graphics g)
         {
 
-            g.DrawImage(person, personRec);
+            //instead of just drawing the person we use the GetNextImage() method to animate the person
+            g.DrawImage(animate.GetNextImage(), personRec);
         }
 
         public void movePerson(string move)
