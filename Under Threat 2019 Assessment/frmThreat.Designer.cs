@@ -63,7 +63,6 @@
             // 
             // tmrPerson
             // 
-            this.tmrPerson.Interval = 50;
             this.tmrPerson.Tick += new System.EventHandler(this.tmrPerson_Tick);
             // 
             // label1
