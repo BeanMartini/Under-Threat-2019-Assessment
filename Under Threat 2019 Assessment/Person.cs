@@ -52,10 +52,10 @@ namespace Under_Threat_2019_Assessment
 
             if (move == "right")
             {
-                if (personRec.Location.X > 559) // is person hitting the right side
+                if (personRec.Location.X > 544) // is person hitting the right side
                 {
 
-                    x = 560;
+                    x = 545;
                     personRec.Location = new Point(x, y);
                 }
                 else
@@ -95,10 +95,10 @@ namespace Under_Threat_2019_Assessment
 
             if (move == "down")
             {
-                if (personRec.Location.Y > 408) // is person hitting the bottom side
+                if (personRec.Location.Y > 384) // is person hitting the bottom side
                 {
 
-                    y = 409;
+                    y = 385;
                     personRec.Location = new Point(x, y);
                 }
                 else

@@ -63,20 +63,25 @@ namespace Under_Threat_2019_Assessment
                     missile[i].x += rndmspeed;
                 }
 
-                else
-                {
+                
                     if (score > 15)
                     {
-                        int rndmspeed = xspeed.Next(6, 30); //each missile has a higher random speed
+                        int rndmspeed = xspeed.Next(5, 30); //each missile has a higher random speed
                         missile[i].x += rndmspeed;
                     }
 
                     if (score > 25)
                     {
-                        int rndmspeed = xspeed.Next(3, 20); //each missile has a higher random speed
+                        int rndmspeed = xspeed.Next(1, 15); //each missile has a higher random speed
                         missile[i].x += rndmspeed;
                     }
-                }
+
+                    if (score > 50)
+                    {
+                        int rndmspeed = xspeed.Next(1, 10); //each missile has a higher random speed
+                        missile[i].x += rndmspeed;
+                    }
+
 
                 //call the Missile class's drawMissile method to draw the images
                 missile[i].drawMissile(g);

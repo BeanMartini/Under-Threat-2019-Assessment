@@ -59,10 +59,12 @@
             // 
             // tmrMissile
             // 
+            this.tmrMissile.Interval = 70;
             this.tmrMissile.Tick += new System.EventHandler(this.tmrMissile_Tick);
             // 
             // tmrPerson
             // 
+            this.tmrPerson.Interval = 65;
             this.tmrPerson.Tick += new System.EventHandler(this.tmrPerson_Tick);
             // 
             // label1
@@ -156,6 +158,7 @@
             // 
             // mnuStart
             // 
+            this.mnuStart.Enabled = false;
             this.mnuStart.Font = new System.Drawing.Font("Bauhaus 93", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuStart.ForeColor = System.Drawing.Color.White;
             this.mnuStart.ImageTransparentColor = System.Drawing.Color.Transparent;
@@ -179,6 +182,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 549);
             this.Controls.Add(this.txtLives);
             this.Controls.Add(this.label4);
