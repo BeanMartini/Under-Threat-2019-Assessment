@@ -59,26 +59,26 @@ namespace Under_Threat_2019_Assessment
                 if (score < 16)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    int rndmspeed = xspeed.Next(5, 30);
+                    int rndmspeed = xspeed.Next(1, 15);
                     missile[i].x += rndmspeed;
                 }
 
                 
                     if (score > 15)
                     {
-                        int rndmspeed = xspeed.Next(5, 20); //each missile has a higher random speed
+                        int rndmspeed = xspeed.Next(1, 20); //each missile has a higher random speed
                         missile[i].x += rndmspeed;
                     }
 
                     if (score > 25)
                     {
-                        int rndmspeed = xspeed.Next(2, 15); //each missile has a higher random speed
+                        int rndmspeed = xspeed.Next(1, 10); //each missile has a higher random speed
                         missile[i].x += rndmspeed;
                     }
 
                     if (score > 50)
                     {
-                        int rndmspeed = xspeed.Next(2, 15); //each missile has a higher random speed
+                        int rndmspeed = xspeed.Next(1, 5); //each missile has a higher random speed
                         missile[i].x += rndmspeed;
                     }
 

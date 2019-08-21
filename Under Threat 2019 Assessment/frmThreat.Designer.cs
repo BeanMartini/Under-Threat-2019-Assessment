@@ -59,12 +59,12 @@
             // 
             // tmrMissile
             // 
-            this.tmrMissile.Interval = 70;
+            this.tmrMissile.Interval = 15;
             this.tmrMissile.Tick += new System.EventHandler(this.tmrMissile_Tick);
             // 
             // tmrPerson
             // 
-            this.tmrPerson.Interval = 65;
+            this.tmrPerson.Interval = 15;
             this.tmrPerson.Tick += new System.EventHandler(this.tmrPerson_Tick);
             // 
             // label1
